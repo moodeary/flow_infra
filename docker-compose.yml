@@ -56,8 +56,6 @@ services:
       context: ../flow_frontend
       dockerfile: Dockerfile
     container_name: flow_frontend
-    ports:
-      - "3000:80"
     networks:
       - flow_network
     restart: unless-stopped
