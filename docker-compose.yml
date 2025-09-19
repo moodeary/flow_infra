@@ -37,6 +37,7 @@ services:
       - TZ=Asia/Seoul
     volumes:
       - backend_logs:/app/logs
+      - file_uploads:/flow/data
     networks:
       - flow_network
     depends_on:
@@ -101,4 +102,6 @@ volumes:
   nginx_logs:
     driver: local
   frontend_files:
+    driver: local
+  file_uploads:
     driver: local
